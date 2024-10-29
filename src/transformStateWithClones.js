@@ -19,7 +19,7 @@ function transformStateWithClones(state, actions) {
 
       case 'removeProperties':
         actions[i].keysToRemove.forEach((item) => {
-          delete { ...stateCopy[item] };
+          delete stateCopy[item];;
         });
         container.push({ ...stateCopy });
         break;
